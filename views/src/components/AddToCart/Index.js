@@ -1,8 +1,37 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Button, Table, TableCell, TableRow, TableBody ,Typography, Grid, Divider, Box } from '@material-ui/core'
 import { useCart } from 'react-use-cart'
+import { makeStyles } from '@material-ui/core/styles';
+
+
+const useStyles = makeStyles((theme) => ({
+      finalSection : {
+        margin: '1',
+        padding : '1',
+       justifyContent: "space-around",
+       alignItems: "center",
+       flexDirection: "row-reverse",
+       display: "flex"
+      }, 
+      finalText : {
+        variant: 'h6',
+        [theme.breakpoints.up('md')]: {
+          fontSize: '2rem',
+        },
+      }
+
+
+}));
+
+
+
+
 
 const Index = () => {
+
+    const classes = useStyles(); 
+
     const {
         isEmpty,
         totalUniqueItems,
@@ -13,6 +42,8 @@ const Index = () => {
         removeItem,
         emptyCart
       } = useCart();
+
+      console.log(items);
     
     if(isEmpty) return <Typography align="center" variant="h4" color="secondary">Your Cart is Empty</Typography>  
       
@@ -21,7 +52,8 @@ const Index = () => {
             <Typography variant="h3" align="center" color="secondary" >Cart Section</Typography>
             <Divider variant="inset" />
             <br />
-            <Typography variant="h5" >Cart {totalUniqueItems} Total Cart {totalItems}</Typography>
+            <Typography variant="h4" align="right" >Cart {totalUniqueItems} - Total Cart {totalItems}</Typography>
+            <Divider />
     <Table spacing={3} elevation={7} size="small" aria-label="a dense table">
         <TableBody>
           {items.map((item) => (
@@ -61,19 +93,17 @@ const Index = () => {
 
 
       <Box
-             m={1} p={1}
-             justifyContent="space-around"
-            alignItems="center"
-            flexDirection="row-reverse"
-            display="flex"
+          className={classes.finalSection}
         >
 
          <Box p={1} >
             <Button 
             variant="contained"
             color="primary"
+            component={Link}
+            to="/address"
             >
-            <Typography variant="h4" >Pay Now</Typography>
+            <Typography className={classes.finalText} >Purchase Now</Typography>
             </Button>
         </Box>
 
@@ -83,12 +113,13 @@ const Index = () => {
             onClick={()=> emptyCart()}
             color="secondary"
             >
-            <Typography variant="h4" >Clear Cart</Typography>
+            <Typography className={classes.finalText} >Clear Cart</Typography>
             </Button>
         </Box>
 
         <Box p={1} >
-     <Typography variant="h4" > Total Price: ৳ {cartTotal}</Typography>
+
+     <Typography className={classes.finalText} > Total Price: ৳ {cartTotal}</Typography>
 
         </Box>
 

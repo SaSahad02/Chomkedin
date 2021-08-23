@@ -18,7 +18,7 @@ const Product = (props) => {
                    🛒 Add To Cart
                     </Typography>
                     </Button>
-                </Card>
+        </Card>
     )
 }
 
