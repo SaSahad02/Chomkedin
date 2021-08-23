@@ -5,6 +5,8 @@ import { CartProvider } from 'react-use-cart';
 
 import Home from './components/Home/Home'
 import Anniversary from './components/Collection/Anniversary'
+import Birthday from './components/Collection/Birthday'
+import Custom from './components/Collection/Custom'
 import Payment from './components/Purchase/Pay.js'
 import Address from './components/Purchase/Info.js'
 import Order from './components/Purchase/Order.js'
@@ -18,6 +20,8 @@ const App = () => {
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/anniversary" exact component={Anniversary} />
+                <Route path="/birthday" exact component={Birthday} />
+                <Route path="/custom" exact component={Custom} />
                 <Route path="/order-overview" exact component={Order} />
                 <Route path="/order-confirmation" exact component={Confirm} />
                 <Route path="/payment" exact component={Payment} />

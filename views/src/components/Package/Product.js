@@ -5,7 +5,7 @@ import { useCart } from 'react-use-cart'
 const Product = (props) => {
     const { addItem } = useCart()
     return (
-        <Card align="center">
+        <Card align="center" style={{marginTop: '10px'}}>
                  <img  height="450" width="350" src={props.img} alt="img" />
                 <br />
                 <Typography gutterBottom variant="h5" color="primary">

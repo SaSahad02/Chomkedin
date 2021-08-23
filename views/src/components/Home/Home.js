@@ -23,7 +23,7 @@ const Home = () => {
             <Card fullWidth >
                 <img height="150" width="150" src="https://erietigertimes.com/wp-content/uploads/2020/12/gift.jpg" alt="img" />
                 <br />
-                <Button color="primary" variant="outlined">View Collection</Button>
+                <Button component={Link} to="/birthday" color="primary" variant="outlined">View Collection</Button>
                 </Card>
             </Grid>
 
@@ -31,7 +31,7 @@ const Home = () => {
             <Card fullWidth >
                 <img height="150" width="150" src="https://erietigertimes.com/wp-content/uploads/2020/12/gift.jpg" alt="img" />
                 <br />
-                <Button color="primary" variant="outlined">View Collection</Button>
+                <Button component={Link} to="/custom" color="primary" variant="outlined">View Collection</Button>
                 </Card>
             </Grid>
 

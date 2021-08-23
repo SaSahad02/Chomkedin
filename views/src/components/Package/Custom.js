@@ -1,12 +1,12 @@
 import React from 'react'
 import { Typography, Grid, Divider } from '@material-ui/core'
 
-import data from '../Data/AnniversaryPack.js'
+import data from '../Data/CustomPack.js'
 import Product from './Product.js'
 
 
-const Anniversary = () => {
-
+const Custom = () => {
+   
     return (
         <div>
             <div>
@@ -32,4 +32,4 @@ const Anniversary = () => {
     )
 }
 
-export default Anniversary
+export default Custom
