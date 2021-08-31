@@ -5,6 +5,7 @@ import { CartProvider } from 'react-use-cart';
 
 import Navbar from './components/Navbar/Navbar'
 import Home from './components/Home/Home'
+import Auth from './components/Auth/Auth'
 import Anniversary from './components/Collection/Anniversary'
 import Birthday from './components/Collection/Birthday'
 import Custom from './components/Collection/Custom'
@@ -22,6 +23,7 @@ const App = () => {
             <Navbar />
             <Switch>
                 <Route path="/" exact component={Home} />
+                <Route path="/auth" exact component={Auth} />
                 <Route path="/anniversary" exact component={Anniversary} />
                 <Route path="/birthday" exact component={Birthday} />
                 <Route path="/custom" exact component={Custom} />

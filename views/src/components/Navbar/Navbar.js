@@ -1,19 +1,19 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom'
+import { Link, useHistory, useLocation } from 'react-router-dom'
+import decode from 'jwt-decode'
 import { makeStyles } from '@material-ui/core/styles';
 import { deepPurple } from '@material-ui/core/colors';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { Button, Typography } from '@material-ui/core';
-import PostAddIcon from '@material-ui/icons/PostAdd';
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
 
 import logo from '../../img/logo.png'
+import { isAuthenticated, logout } from '../../Auth/auth.js'
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -60,12 +60,33 @@ export default function Navbar () {
 
 
     const history = useHistory()
+    const location = useLocation()
+    const isLoggedIn = isAuthenticated()
 
 
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
+  const singout = () => {
+    logout();
+    history.push('/')
+  }
+
+  React.useEffect(() => {
+
+       if(isLoggedIn) {
+         const decodedToken = decode(isLoggedIn)
+         
+         if (decodedToken.exp * 1000 < new Date().getTime()) {
+           logout()
+          //  dispatch({ type: 'LOGOUTALRET'})
+           history.push('/')
+         }
+       }
+       
+      // setUser(JSON.parse(localStorage.getItem('profile')))
+   }, [location])
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
@@ -95,13 +116,15 @@ export default function Navbar () {
           <div className={classes.grow} />
             <div className={classes.profile}>
               <div className={classes.sectionDesktop}>
-              <Button component={Link} to="/" ><Typography variant="h6">Home</Typography></Button>
-              <MenuItem onClick={handleMenuClose} component={Link} to="/cart" >
-        <IconButton aria-label="cart" color="inherit">
-            <PostAddIcon />
-        </IconButton>
-        <Typography variant="h6" >Cart</Typography>
-      </MenuItem>
+              { isLoggedIn ? (<Button onClick={singout} ><Typography color="secondary" variant="h6">Logout</Typography></Button>) : (
+                <> <Button component={Link} to="/" ><Typography variant="h6">Home</Typography></Button>
+                 <MenuItem onClick={handleMenuClose} component={Link} to="/cart" >
+                  <IconButton aria-label="cart" color="inherit">
+                      <ShoppingCartOutlinedIcon />
+                  </IconButton>
+                  <Typography variant="h6" >Cart</Typography>
+                </MenuItem> </>
+              ) }      
 
           </div>
                          
