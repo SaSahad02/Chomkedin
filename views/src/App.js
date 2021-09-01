@@ -14,6 +14,7 @@ import Payment from './components/Purchase/Pay.js'
 import Address from './components/Purchase/Info.js'
 import Order from './components/Purchase/Order.js'
 import Confirm from './components/Purchase/Confirm.js'
+import adminPanel from './components/Admin/AdminPanel.js'
 
 const App = () => {
     return (
@@ -32,6 +33,7 @@ const App = () => {
                 <Route path="/order-confirmation" exact component={Confirm} />
                 <Route path="/payment" exact component={Payment} />
                 <Route path="/address" exact component={Address} />
+                <Route path="/admin-panel" exact component={adminPanel} />
             </Switch>
           </Container>
         </BrowserRouter>

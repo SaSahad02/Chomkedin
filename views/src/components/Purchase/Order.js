@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
+import axios from 'axios'
 import { List, ListItem, ListItemText, Typography,Grid, Paper, Box, Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import { useCart } from 'react-use-cart'
@@ -26,6 +27,8 @@ const useStyles = makeStyles((theme) => ({
 
 const Order = () => {
     const classes = useStyles()
+    const history = useHistory()
+
     const {
         items,
         cartTotal,
@@ -33,6 +36,20 @@ const Order = () => {
         metadata,
       } = useCart();
 
+      console.log(metadata, items, cartTotal);
+
+    const handleClick = async (e) => {
+      e.preventDefault();
+      await axios.post('http://localhost:8000/admin/order', {
+        metadata, items, cartTotal
+      }).then(function (response) {
+        history.push('/order-confirmation')
+        emptyCart()
+      })
+      .catch(function (error) {
+        console.log("Internal Server Error. Please, try again later. or Check you input again!");
+      });
+    }
 
     return (
         <>
@@ -109,9 +126,7 @@ const Order = () => {
             variant="outlined"
             color="primary"
             size="large"
-            onClick={()=> emptyCart()}
-            component={Link}
-            to="/order-confirmation"
+            onClick={handleClick}
             >
             <Typography variant="h6">Confirm Order</Typography>
             </Button>
