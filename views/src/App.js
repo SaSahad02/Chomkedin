@@ -15,6 +15,7 @@ import Address from './components/Purchase/Info.js'
 import Order from './components/Purchase/Order.js'
 import Confirm from './components/Purchase/Confirm.js'
 import adminPanel from './components/Admin/AdminPanel.js'
+import Footer from './components/Footer/Index.js'
 
 const App = () => {
     return (
@@ -35,6 +36,7 @@ const App = () => {
                 <Route path="/address" exact component={Address} />
                 <Route path="/admin-panel" exact component={adminPanel} />
             </Switch>
+            <Footer />
           </Container>
         </BrowserRouter>
       </CartProvider>

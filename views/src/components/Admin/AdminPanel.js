@@ -1,9 +1,11 @@
 import React, { useState, useEffect} from 'react'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 import moment from 'moment'
 import { Button, Divider, Typography, Grid, Paper, List, ListItem, ListItemText } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
+
+import { isAuthenticated } from '../../Auth/auth.js'
 
 const useStyles = makeStyles((theme) => ({
     listItem: {
@@ -33,31 +35,37 @@ const AdminPanel = () => {
 
     const [order, setOrder] = useState([])
     const [totalOrder, setTotalOrder] = useState()
-    const [id, setId] = useState()
     const classes = useStyles()
+    const history = useHistory()
+    const isLoggedIn = isAuthenticated();
+
+    if(!isLoggedIn) {
+      history.push('/')
+    }
 
     useEffect(() => {
         axios.post('http://localhost:8000/admin/orderview')
           .then(function (response) {
             setOrder(response.data.data.orderList);
             setTotalOrder(response.data.data.total);
-            console.log(response.data.data.orderList);
+            //console.log(response.data.data.orderList);
           })
           .catch(function (error) {
             console.log(error);
           });
         }, [])
     
-    const handleClick = () => {
+    function handleClick (id) {
+      //console.log(id);
         axios.post('http://localhost:8000/admin/order-response', {
             id
         })
         .then(function (response) {
-            console.log(response);
+          setOrder(response.data.orderList);
+           // console.log(response);
         }).catch(function (error) {
             console.log(error);
         })
-        console.log(id);
     }
     return (
         <div>
@@ -68,7 +76,8 @@ const AdminPanel = () => {
             <Typography variant="h4" color="primary" >Total Order: {totalOrder}</Typography>
             <Typography variant="h5" color="primary" >Current Orders:</Typography>
             <div>
-        {order.map((view) => (
+        { order.length ? 
+         order.map((view) => (
             <Paper elevation={3} className={classes.paper} >
       <Typography variant="h5" color="secondary" align="center" gutterBottom>
         Order Time: {moment(view.orderedAt).format('YYYY-MM-DD hh:mm A')}
@@ -133,11 +142,13 @@ const AdminPanel = () => {
         </Grid>
       </Grid>
       <div align="center">
-      <Button variant="outlined" size="large" color="primary" onClick={()=> handleClick(setId(view._id))} >Order Shipped</Button>
+      <Button variant="outlined" size="large" color="primary" onClick={()=> handleClick(view._id)} >Order Shipped</Button>
       </div>
       <br />
     </Paper>
-                ) )}
+                ) ) : 
+                <Typography align="center" variant="h4" color="secondary">Currently, No order is pending.</Typography>
+                }
             </div>
         </div>
     )

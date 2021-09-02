@@ -24,7 +24,7 @@ const Pay = () => {
 
     const classes = useStyles()
     const history = useHistory()
-    const { updateCartMetadata, cartTotal, metadata } = useCart();
+    const { updateCartMetadata, cartTotal} = useCart();
 
     const handleChange = (e) => {
       updateCartMetadata({ [e.target.name]: e.target.value });

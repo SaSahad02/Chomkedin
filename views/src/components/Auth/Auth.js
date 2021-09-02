@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui/core'
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 
@@ -32,7 +32,7 @@ const Auth = () => {
       await axios.post('http://localhost:8000/admin/signin', {
         email, password
       }).then(function (response) {
-        console.log(response);
+       // console.log(response);
         setAuthentication(response.data.token);
         history.push('/admin-panel')
       })

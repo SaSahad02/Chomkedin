@@ -29,7 +29,7 @@ const Info = () => {
         <Divider />
         <form onSubmit={handleSubmit}>
         <Grid style={{marginTop: '10px'}} container justify="space-between" spacing={4} align="center" >
-            <Grid xs={12} sm={12} lg={5}  >
+            <Grid item xs={12} sm={12} lg={5}  >
             <React.Fragment>
       <Typography variant="h5" gutterBottom>
         Shipping address
@@ -90,7 +90,7 @@ const Info = () => {
       </Grid>
     </React.Fragment> 
             </Grid>
-            <Grid xs={12} sm={12} lg={5} >
+            <Grid item xs={12} sm={12} lg={5} >
             <React.Fragment>
       <Typography variant="h5" gutterBottom>
         Billing address

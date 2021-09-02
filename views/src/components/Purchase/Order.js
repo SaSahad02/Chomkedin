@@ -36,7 +36,7 @@ const Order = () => {
         metadata,
       } = useCart();
 
-      console.log(metadata, items, cartTotal);
+      //console.log(metadata, items, cartTotal);
 
     const handleClick = async (e) => {
       e.preventDefault();

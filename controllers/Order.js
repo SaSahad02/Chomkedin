@@ -30,4 +30,17 @@ const orderView = async (req, res) => {
     }
 }
 
-module.exports = { orderSave, orderView }
+const orderCompleted = async (req, res) => {
+    const { id } = req.body;
+    console.log(id);
+    try {
+        const statusUpdate = await Order.findByIdAndUpdate( id , {orderStatus: true}, { new: true})
+        const orderList =await Order.find({ orderStatus: false });
+        res.json({ orderList })
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({ message: 'Something went'})
+    }
+}
+
+module.exports = { orderSave, orderView, orderCompleted }
