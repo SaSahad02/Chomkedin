@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Grid, Card, Button, Typography } from '@material-ui/core'
+import { Container, Grid, Card, Button, Typography, Divider } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 import a from '../../img/a.png'
 import b from '../../img/b.png'
@@ -23,10 +23,13 @@ const Home = () => {
     return (
         <Container>
             <Grid spacing={4} align="center" >
-  <img className={classes.banner} src="https://image.shutterstock.com/image-vector/surprise-sign-colour-confetti-vector-260nw-313945592.jpg" alt="img" />
+             <Typography style={{marginBottom: '20px'}} align="center" variant="h1" color="secondary" gutterBottom >ChomkeDin</Typography>
+            <Typography style={{marginBottom: '10px'}} align="center" variant="h5" gutterBottom >Your Planning, Our Execution</Typography>
             </Grid>
             <br />
-            <Typography style={{marginBottom: '20px'}} align="center" variant="h3" color="secondary" gutterBottom >Our Services</Typography>
+            <Divider variant="inset" />
+            <Typography  align="center" variant="h3" color="secondary" >Our Services</Typography>
+            <Divider variant="inset" style={{marginBottom: '40px'}}  />
             <Grid  container spacing={4} justify="space-between" align="center" >
             <Grid xs={12} lg={4} >
                 <Card fullWidth >

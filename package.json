@@ -7,7 +7,7 @@
     "start": "node index",
     "dev": "nodemon index"
   },
-  "author": "Sajib",
+  "author": "Sahad",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",

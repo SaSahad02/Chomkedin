@@ -94,8 +94,8 @@ const Pay = () => {
                   flexDirection="row-reverse"
                   display="flex">
 
-            <Button type="submit" size="large" variant="outlined" color="primary" >Confirm Payment</Button>         
-            <Button component={Link} to="/address" size="large" variant="outlined" color="secondary" >Go Back</Button>         
+            <Button type="submit" size="large" variant="contained" color="primary" >Confirm Payment</Button>         
+            <Button component={Link} to="/address" size="large" variant="contained" color="secondary" >Go Back</Button>         
             </Box>
             </form>
     )

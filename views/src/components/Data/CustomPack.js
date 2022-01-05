@@ -3,6 +3,7 @@ import pack2 from '../../img/c2.jpg';
 import pack3 from '../../img/c3.jpg';
 import pack4 from '../../img/can1.jpg';
 import pack5 from '../../img/can2.jpg';
+import pack7 from '../../img/can3.jpg';
 import pack6 from '../../img/fireworks.jpg';
 
 
@@ -42,6 +43,24 @@ const data = {
             id: 'C-106',
             img: pack6,
             title: 'Fireworks',
+            price: 1000,
+        },
+        {
+            id: 'C-107',
+            img: pack6,
+            title: 'Fireworks',
+            price: 1000,
+        },
+        {
+            id: 'C-108',
+            img: pack7,
+            title: 'Candle 3',
+            price: 1000,
+        },
+        {
+            id: 'C-109',
+            img: pack7,
+            title: 'Candle 4',
             price: 1000,
         },
 

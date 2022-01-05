@@ -6,7 +6,7 @@ const orderSchema = new mongoose.Schema({
         payNumber: { type: Number },
         transactionId: { type: String },
         shipName: { type: String },
-        shipNumber: { type: 'Number' },
+        shipNumber: { type: Number },
         shipAddress: { type: String },
         shipCity: { type: String },
         shipState: { type: String },
@@ -15,6 +15,7 @@ const orderSchema = new mongoose.Schema({
         billAddress: { type: String },
         billCity: { type: String },
         billState: { type: String },
+        info: { type: String}
     },
     orderItems: [
         {

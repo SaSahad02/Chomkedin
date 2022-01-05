@@ -24,8 +24,8 @@ const Index = () => {
 
 <Grid xs={12} lg={4} >
 
-                   <Typography align="center" color="secondary">Copyright © 2021 ChomkeDin - All Rights Reserved</Typography>
-                   <Typography align="center">Surprise Executor MERN Project by Sajib</Typography>
+                   <Typography align="center" color="secondary">Copyright © 2022 ChomkeDin</Typography>
+                   <Typography align="center">Surprise Executor by Sahad</Typography>
 </Grid>
     </Grid>
 </Paper>

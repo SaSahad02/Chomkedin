@@ -35,7 +35,7 @@ const PORT = process.env.PORT || 8000
 const server = app.listen(PORT, () => console.log(`Server is up and running on port: ${PORT}`))
 
 // Connecting to mongoDB
-const CONNECTION_URL = 'mongodb+srv://sajib:sajib123@cluster0.yuvd7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const CONNECTION_URL = 'mongodb+srv://sahad:sahad@cluster0.gwmoq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 // 'mongodb://localhost:27017/'
 mongoose.connect( CONNECTION_URL, {
     useNewUrlParser: true,

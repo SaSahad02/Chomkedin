@@ -95,6 +95,9 @@ const AdminPanel = () => {
           ৳ {view.orderAmount}
           </Typography>
         </ListItem>
+        <ListItem className={classes.listItem}>
+          <ListItemText primary="Instruction" secondary={view.metadata.info} />
+        </ListItem>
       </List>
       <Grid style={{margin: '10px'}} container spacing={2}>
         <Grid item xs={12} sm={6} lg={4}>

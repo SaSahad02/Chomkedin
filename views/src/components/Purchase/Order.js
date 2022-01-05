@@ -36,7 +36,7 @@ const Order = () => {
         metadata,
       } = useCart();
 
-      //console.log(metadata, items, cartTotal);
+      console.log(metadata, items, cartTotal);
 
     const handleClick = async (e) => {
       e.preventDefault();
@@ -69,6 +69,9 @@ const Order = () => {
           <Typography variant="subtitle1" className={classes.total}>
           ৳ {cartTotal}
           </Typography>
+        </ListItem>
+        <ListItem className={classes.listItem}>
+          <ListItemText primary="Instruction" secondary={metadata.info} />
         </ListItem>
       </List>
       <Grid style={{margin: '10px'}} container spacing={2}>

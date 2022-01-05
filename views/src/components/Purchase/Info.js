@@ -154,7 +154,14 @@ const Info = () => {
             </Grid>
             <br />
             <div align="center">
-            <Button  type="submit" size="large" variant="outlined" >Confirm Address</Button>
+            <TextField
+            id="info"
+            name="info"
+            label= "Any Instruction for Cake and Card"
+            fullWidth
+            onChange={handleChange}
+          />
+            <Button style={{marginTop: '20px'}}  type="submit" size="large" variant="contained" color="primary" >Confirm Address</Button>
             </div>
             </form>
             </>

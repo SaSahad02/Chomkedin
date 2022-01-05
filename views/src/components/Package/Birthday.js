@@ -8,10 +8,10 @@ import Product from './Product.js'
 const Birthday = () => {
    
     return (
-        <div>
+        <div align="center">
             <div>
            <Typography align="center" gutterBottom variant="h3" color="secondary">
-           Anniversary
+           Birthday
                </Typography> 
             <Divider variant="middle" gutterBottom />
             </div>
