@@ -1,69 +1,153 @@
-import pack1 from '../../img/c1.jpg';
-import pack2 from '../../img/c2.jpg';
-import pack3 from '../../img/c3.jpg';
-import pack4 from '../../img/can1.jpg';
-import pack5 from '../../img/can2.jpg';
-import pack7 from '../../img/can3.jpg';
-import pack6 from '../../img/fireworks.jpg';
-
+import pack1 from '../../img/PRBChoco.png';
+import pack2 from '../../img/PRB Vanilla.png';
+import pack3 from '../../img/PRB Heart Shaped.jpg';
+import pack4 from '../../img/Cake Crumbs Choco.jpg';
+import pack5 from '../../img/Cake Crumbs Vanilla.png';
+import pack6 from '../../img/Cake Crumbs Red Velvet.jpg';
+import pack7 from '../../img/Tasty Treat Cherry.jpg';
+import pack8 from '../../img/Tasty Treat Vanilla.jpg';
+import pack9 from '../../img/Tasty Treat Choco.jpg';
+import pack10 from '../../img/Chadni Chwak Mango.png';
+import pack11 from '../../img/Chadni Chwak Red Velvet.png';
+import pack12 from '../../img/Chadni Chwak Vanilla.png';
+import pack13 from '../../img/Number Candle.jpg';
+import pack14 from '../../img/Happy Birthday Candle.png';
+import pack15 from '../../img/Heart Shape Candle.jpg';
+import pack16 from '../../img/Carved Candles.jpg';
+import pack17 from '../../img/Cadbury Bourneville.jpg';
+import pack18 from '../../img/Cadbury Dairy Milk.jpg';
+import pack19 from '../../img/Kitkat.jpg';
+import pack20 from '../../img/Safari.jpg';
+import pack21 from '../../img/Bounty.png';
 
 const data = {
       productData: [
           {
               id: 'C-101',
               img: pack1,
-              title: 'Cake Premium',
-              price: 1500,
+              title: 'Paris Buggette Chocolate',
+              price: 750,
           },
           {
             id: 'C-102',
             img: pack2,
-            title: 'Cake Standard',
-            price: 1200,
+            title: 'Paris Buggette Vanilla',
+            price: 700,
         },
         {
             id: 'C-103',
             img: pack3,
-            title: 'Cake Normal',
+            title: 'Paris Buggette Heart Shape',
             price: 1000,
         },
         {
             id: 'C-104',
             img: pack4,
-            title: 'Candle 1',
-            price: 1200,
+            title: 'Cake Crumbs Chocolate',
+            price: 800,
         },
         {
             id: 'C-105',
             img: pack5,
-            title: 'Candle 2',
-            price: 1000,
+            title: 'Cake Crumbs Vanilla',
+            price: 700,
         },
         {
             id: 'C-106',
             img: pack6,
-            title: 'Fireworks',
-            price: 1000,
+            title: 'Cake Crumbs Red Velvet',
+            price: 1200,
         },
         {
             id: 'C-107',
-            img: pack6,
-            title: 'Fireworks',
-            price: 1000,
+            img: pack7,
+            title: 'Tasty Treat Cherry',
+            price: 900,
         },
         {
             id: 'C-108',
-            img: pack7,
-            title: 'Candle 3',
-            price: 1000,
+            img: pack8,
+            title: 'Tasty Treat Vanilla',
+            price: 700,
         },
         {
             id: 'C-109',
-            img: pack7,
-            title: 'Candle 4',
-            price: 1000,
+            img: pack9,
+            title: 'Tasty Treat Chocolate',
+            price: 750,
         },
-
+        {
+            id: 'C-110',
+            img: pack10,
+            title: 'Chadni Chwak Mango',
+            price: 500,
+        },
+        {
+            id: 'C-111',
+            img: pack11,
+            title: 'Chadni Chwak Red Velvet',
+            price: 600,
+        },
+        {
+            id: 'C-112',
+            img: pack12,
+            title: 'Chadni Chwak Vanilla',
+            price: 400,
+        },
+        {
+            id: 'C-113',
+            img: pack13,
+            title: 'Number Candle',
+            price: 50,
+        },
+        {
+            id: 'C-114',
+            img: pack14,
+            title: 'Happy Birthday Candle',
+            price: 100,
+        },
+        {
+            id: 'C-115',
+            img: pack15,
+            title: 'Heart Shape Candle',
+            price: 250,
+        },
+        {
+            id: 'C-116',
+            img: pack16,
+            title: 'Carved Candle',
+            price: 400,
+        },
+        {
+            id: 'C-117',
+            img: pack17,
+            title: 'Cadbury Bourneville',
+            price: 300,
+        },
+        {
+            id: 'C-118',
+            img: pack18,
+            title: 'Cadbury Dairy Milk',
+            price: 300,
+        },
+        {
+            id: 'C-119',
+            img: pack19,
+            title: 'Kitkat (3 pcs)',
+            price: 150,
+        },
+        {
+            id: 'C-120',
+            img: pack20,
+            title: 'Safari (4pcs)',
+            price: 100,
+        },
+        {
+            id: 'C-121',
+            img: pack21,
+            title: 'Bounty (3pcs)',
+            price: 120,
+        },
       ]
 }
 

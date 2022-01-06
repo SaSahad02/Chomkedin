@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, Grid, Divider } from '@material-ui/core'
+import { Typography, Grid, Divider, Box } from '@material-ui/core'
 
 import data from '../Data/CustomPack.js'
 import Product from './Product.js'
@@ -11,7 +11,7 @@ const Custom = () => {
         <div>
             <div>
            <Typography align="center" gutterBottom variant="h3" color="secondary">
-           Anniversary
+           Customize Package
                </Typography> 
             <Divider variant="middle" gutterBottom />
             </div>

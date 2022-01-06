@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import { Grid, TextField, Typography, Divider, Button, Checkbox, FormControlLabel } from '@material-ui/core'
+import { Grid, TextField, Typography, Divider, Button, Checkbox, FormControlLabel, Box } from '@material-ui/core'
 import { useCart } from "react-use-cart";
 
 
@@ -25,7 +25,9 @@ const Info = () => {
 
     return (
         <>
-        <Typography variant="h4" color="secondary" gutterBottom align="center">Checkout</Typography>
+        <Typography variant="h4" color="secondary" gutterBottom align="center">
+        <Box sx={{ fontWeight: 'bold', m: 1 }}>Checkout</Box>
+        </Typography>
         <Divider />
         <form onSubmit={handleSubmit}>
         <Grid style={{marginTop: '10px'}} container justify="space-between" spacing={4} align="center" >
@@ -157,7 +159,7 @@ const Info = () => {
             <TextField
             id="info"
             name="info"
-            label= "Any Instruction for Cake and Card"
+            label= "Instruction for Cake, Card or Anything"
             fullWidth
             onChange={handleChange}
           />

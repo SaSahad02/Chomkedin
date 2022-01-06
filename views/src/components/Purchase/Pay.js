@@ -59,7 +59,7 @@ const Pay = () => {
                 gutterBottom
               >
                         <option aria-label="None" value="" />
-                        <option value='bKash'>bKash</option>
+                        <option value='bKash'>BKash</option>
                         <option value='Nagad'>Nagad</option>
                         <option value='Rocket'>Rocket</option>
                         </TextField>

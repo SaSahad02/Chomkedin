@@ -53,11 +53,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
-
-
 export default function Navbar () {
-
 
     const history = useHistory()
     const location = useLocation()

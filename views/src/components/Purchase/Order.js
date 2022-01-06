@@ -54,8 +54,8 @@ const Order = () => {
     return (
         <>
         <Paper elevation={2}>
-      <Typography variant="h4" color="secondary" align="center" gutterBottom>
-        Order summary
+      <Typography variant="h3" color="secondary" align="center" gutterBottom>
+      <Box sx={{ fontWeight: 'bold', m: 1 }}>Order Summary</Box>
       </Typography>
       <List disablePadding style={{margin: '10px'}}>
         {items.map((product) => (
@@ -126,7 +126,7 @@ const Order = () => {
 
          <Box p={1} >
             <Button 
-            variant="outlined"
+            variant="contained"
             color="primary"
             size="large"
             onClick={handleClick}
@@ -137,7 +137,7 @@ const Order = () => {
 
         <Box p={1} >
             <Button 
-            variant="outlined"
+            variant="contained"
             size="large"
             color="secondary"
             component={Link}
