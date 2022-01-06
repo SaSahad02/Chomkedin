@@ -19,6 +19,11 @@ import pack18 from '../../img/Cadbury Dairy Milk.jpg';
 import pack19 from '../../img/Kitkat.jpg';
 import pack20 from '../../img/Safari.jpg';
 import pack21 from '../../img/Bounty.png';
+import pack22 from '../../img/Flower Bouqet.jpg';
+import pack23 from '../../img/Gift Box.jpg';
+import pack24 from '../../img/Greeting Card.jpg';
+import pack25 from '../../img/Balloons.jpg';
+
 
 const data = {
       productData: [
@@ -148,6 +153,32 @@ const data = {
             title: 'Bounty (3pcs)',
             price: 120,
         },
+        {
+            id: 'C-122',
+            img: pack22,
+            title: 'Flower Bouqet',
+            price: 200,
+        },
+        {
+            id: 'C-123',
+            img: pack23,
+            title: 'Gift Box',
+            price: 500,
+        },
+        {
+            id: 'C-124',
+            img: pack24,
+            title: 'Greeting Card)',
+            price: 120,
+        },
+        {
+            id: 'C-125',
+            img: pack25,
+            title: 'Ballons',
+            price: 80,
+        },
+     
+
       ]
 }
 

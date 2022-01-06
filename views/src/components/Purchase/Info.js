@@ -163,6 +163,13 @@ const Info = () => {
             fullWidth
             onChange={handleChange}
           />
+          <TextField
+            id="info"
+            name="info"
+            label= "Anything specific to put in Gift Box (within 500 Bdt)?"
+            fullWidth
+            onChange={handleChange}
+          />
             <Button style={{marginTop: '20px'}}  type="submit" size="large" variant="contained" color="primary" >Confirm Address</Button>
             </div>
             </form>
