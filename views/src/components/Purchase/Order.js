@@ -70,9 +70,12 @@ const Order = () => {
           ৳ {cartTotal}
           </Typography>
         </ListItem>
-        <ListItem className={classes.listItem}>
+        {metadata.info && <ListItem className={classes.listItem}>
           <ListItemText primary="Instruction" secondary={metadata.info} />
-        </ListItem>
+        </ListItem>}
+        {metadata.gift && <ListItem className={classes.listItem}>
+          <ListItemText primary="Gift Box" secondary={metadata.gift} />
+        </ListItem>}
       </List>
       <Grid style={{margin: '10px'}} container spacing={2}>
         <Grid item xs={12} sm={6} lg={4}>

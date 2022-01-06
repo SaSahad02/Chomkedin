@@ -164,8 +164,8 @@ const Info = () => {
             onChange={handleChange}
           />
           <TextField
-            id="info"
-            name="info"
+            id="gift"
+            name="gift"
             label= "Anything specific to put in Gift Box (within 500 Bdt)?"
             fullWidth
             onChange={handleChange}

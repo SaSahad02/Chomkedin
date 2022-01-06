@@ -15,7 +15,8 @@ const orderSchema = new mongoose.Schema({
         billAddress: { type: String },
         billCity: { type: String },
         billState: { type: String },
-        info: { type: String}
+        info: { type: String},
+        gift: { type: String}
     },
     orderItems: [
         {

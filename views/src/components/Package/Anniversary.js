@@ -18,7 +18,7 @@ const Anniversary = () => {
             <br />
             <div>
 
-        <Grid xs={12} container justify="space-between" spacing={1} >
+        <Grid xs={12} container justify="space-around" spacing={1} >
                 {data.productData.map((item, index) => {
                     return (
                         <Product item={item} key={index} price={item.price} title={item.title} img={item.img} />
